@@ -1,0 +1,170 @@
+header {
+    background-color: #02301b;;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height:130px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+ 
+  }
+  
+  
+  .company-name {
+    margin-left: 0px;
+    text-align: center;
+    font-size : 26px;
+    font-weight: 1000;
+    margin-top: 50px;
+    letter-spacing:2px;
+    line-height: 24px;
+
+    }
+  
+  .slogan {
+    font-size: 7px;
+    font-family:serif;
+    margin-top: 105px;
+    margin-left: -220px;
+    letter-spacing:8px;
+  }
+  
+  nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    margin-right: 250px;
+    margin-bottom: -20px;
+  
+  }
+  
+  nav ul li {
+    list-style-type: none;
+    margin-bottom: -180px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    display: block;
+    padding: 0px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background-color: #8fe40f;
+  }
+  .top1{
+    white-space: nowrap;
+    position: absolute;
+    margin-top: -150px;
+    right: 210px;
+    font-size: 12px;
+  }
+  .top2{
+    white-space: nowrap;
+    position: absolute;
+    margin-top: -150px;
+    right: 150px;
+    font-size: 12px;
+  }
+  .top3{
+    white-space: nowrap;
+    position: absolute;
+    margin-top: -150px;
+    right: 100px;
+    font-size: 12px;
+  }
+  
+  .dropdown {
+    position: relative;
+    margin-left: 80px;
+  }
+  
+  
+  .dropdown-content {
+    white-space: nowrap;
+    display: none;
+    position: absolute;
+    background-color: #8fe40f60;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    
+    color:#02301b;
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+  }
+ 
+    
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .top1:hover .dropdown-content {
+    display: block;
+  }
+  
+  .cart-icon {
+    position: relative;
+    display: inline-block;
+    margin-top: 80px;
+    right: 40px;
+  
+  }
+  
+  .order {
+    position: absolute;
+    top: 60%;
+    left: 80%;
+    transform: translateX(-50%);
+    padding: 1px 1px;
+    background-color: #8fe40f;
+    color: #02301b;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .cart-icon:hover .order {
+    opacity: 1;
+  }
+  
+  .fun-facts{
+    white-space: nowrap;
+    position: absolute;
+    margin-top: -150px;
+    right: 260px;
+    font-size: 12px;
+  
+    
+  }
+
+  
+  @media (max-width: 768px) {
+    .logo {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .slogan {
+      display: none;
+    }
+  
+    nav {
+      display: none;
+     
+  
+    }
+  }

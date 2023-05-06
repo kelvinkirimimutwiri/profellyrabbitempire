@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+{% static "images" as baseUrl %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Breed</title>
+  <link rel="stylesheet" href="{% static 'styles/template.css' %}">
+</head>
+
+<body>
+  <div class="slider">
+    {% for dest in rab %}
+    <div class="slide">
+      <div id="rectangle2">
+        <p>{{dest.desc}}</p>
+      </div>
+      <div id="rectangle-text">
+        <h2>{{dest.name}}</h2>
+      </div>
+      <div id="rectangle">
+        <img src="{{dest.img.url}}">
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+
+  <div class="controls">
+    <button class="prev">Back</button>
+    <div class="progress-container">
+      <div class="progress"></div>
+      <div class="progress-text">0%</div>
+    </div>
+    <button class="next">Next</button>
+  </div>
+
+  <script src="{% static 'js/template.js' %}"></script>
+</body>
+
+</html>

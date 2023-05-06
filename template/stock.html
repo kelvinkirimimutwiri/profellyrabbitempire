@@ -1,0 +1,317 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>prof ELLY rabbit empire</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Travello template project">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+	<link href="{%static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+	<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+	<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'styles/main_styles.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'styles/responsive.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'styles/header.css' %}">
+</head>
+
+<body>
+
+	<div class="super_container">
+
+		<!-- Header -->
+		<header>
+			<div class="logo">
+			  <img src="{%static 'images/prof.png' %}" width="100%" height="100%"></div>
+			  <div class="company-name">Prof ELLY <br>Rabbit Empire</div>
+			  <div class="slogan">Shaping Your Need</div>
+			
+			<nav>
+			  <ul><li class="dropdown">
+				<a href="/">Home</a></li>
+				<li class="dropdown">
+				 Learn
+				  <div class="dropdown-content">
+					<a href="#">Rabbit Breeds</a>
+					<a href="#">Rabbit Products</a>
+					<a href="#">Rabbit Taxonomy</a>
+					<a href="#">Rabbit Feeding</a>
+					<a href="#">Rabbit Housing</a>
+					<a href="#">Rabbit Diseases</a>
+				  </div>
+				</li>
+				<li class="dropdown">
+				  Stock
+				  <div class="dropdown-content">
+					<a href="/stock">Available Stock</a>
+					<a href="/orders" >Price List</a>
+					<a href="#" >Order</a>
+				  </div>
+				</li>
+				<li class="dropdown">
+				 Events
+				  <div class="dropdown-content">
+					<a href="#">Past Events</a>
+					<a href="#">Latest Updates</a>
+				  </div>
+				</li>
+			 
+		   
+			   
+			   
+				<li class="fun-facts">
+				  <a href="#">Fun Facts |</a>
+				</li>
+				<li class="top1">
+				  <a href="#">Help |</a>
+				  <div class="dropdown-content">
+					<a href="#">Order Status</a>
+					<a href="#">Shopping & Delivery</a>
+					<a href="/contacts">Contact Us</a>
+					<a href="/about">About Us</a>
+					<a href="#">Privacy Policy</a>
+					<a href="#">Terms of Sale</a>
+					<a href="#">Terms of Use</a>
+					<a href="#">Send Us Feedback</a>
+				  </div>
+				  </li>
+				  <li class="top2">
+					<a href="accounts/account/"> Join Us |</a></li>
+				  <li class="top3">
+					<a href="accounts/account/"> Sign In</a>
+			  </li>
+		   </li>
+		   </ul>
+		   </nav>
+			
+		   <div class="cart-icon">
+			<i class="fas fa-shopping-cart"width="100%" height="100%"></i> 
+			<div class="order">Order</div>
+		  </div>
+		  
+			</div>
+			</div>
+			
+
+		<!-- Header ends here-->
+
+		<!-- Stock -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+		<div class="destinations" id="destinations">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<div class="section_subtitle">shop with us</div>
+						<div class="section_title">
+							<h2>Available stock</h2>
+						</div>
+					</div>
+					
+							
+				</div>
+				<div class="row destinations_row">
+					<div class="col">
+						<div class="destinations_container item_grid">
+
+							{% for dest in stocks %}
+							
+							<!-- stocks -->
+							<div class="destination item">
+								<div class="destination_image">
+									<img src="{{dest.img.url}}" alt="">
+								</div>
+								<div class="destination_content">
+									<div class="destination_title"><a href="#">{{dest.name}}</a></div>
+									<div class="destination_price">Does : {{dest.does}}</div>
+									<div class="destination_price">Bucks : {{dest.bucks}}</div>
+									<div class="destination_price">Bunnies : {{dest.bunnies}}</div>
+								</div>
+							</div>
+
+							{% endfor %}
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<!-- Intro -->
+
+		<div class="intro">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="intro_container">
+							<div class="row">
+
+								<!-- Intro Item -->
+								<div class="col-lg-4 intro_col">
+									<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+										<div class="intro_icon"><a href="accounts/account/"> <i class="fas fa-book"></i></div>
+										<div class="intro_content">
+											<div class="intro_title">Rabbit Farming Education</div>
+											<div class="intro_subtitle">
+												<p>We will educate you on modern rabbit rearing practices</p>
+											</div>
+										</div></a>
+									</div>
+								</div>
+
+								<!-- Intro Item -->
+								<div class="col-lg-4 intro_col">
+									<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+										<div class="intro_icon"><a href="accounts/account/"> <i class="fas fa-hospital"></i>
+										</div>
+										<div class="intro_content">
+											<div class="intro_title">The Rabbit Veterinary</div>
+											<div class="intro_subtitle">
+												<p>From treatment, vaccination and Health of rabbit</p>
+											</div>
+										</div></a>
+									</div>
+								</div>
+
+								<!-- Intro Item -->
+								<div class="col-lg-4 intro_col">
+									<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+										<div class="intro_icon"><a href="accounts/account/"> <i class="fas fa-shopping-cart"></i>
+										</div>
+										<div class="intro_content">
+											<div class="intro_title">The Rabbit Market</div>
+											<div class="intro_subtitle">
+												<p>Sell and buy quality breeds here</p>
+											</div>
+										</div></a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        		<!-- Testimonials -->
+
+		<div class="testimonials" id="testimonials">
+			<div class="parallax_background parallax-window" data-parallax="scroll">
+				
+			<div class="container">
+				<div class="row footer_contact_row">
+					<div class="col-xl-10 offset-xl-1">
+						<div class="row">
+
+							<!-- Footer Contact Item -->
+							<div class="col-xl-4 footer_contact_col">
+								<div
+									class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+									<div class="footer_contact_icon">
+										<div class="fab">
+											<a href="tel:071807845">
+											  <i class="fas fa-phone"></i>
+											</a>
+											
+										  </div>
+										
+									</div>
+									<div class="footer_contact_title">give us a call</div>
+									<div class="footer_contact_list">
+										<ul>
+											<li>Mobile: +254 711 807 845</li>
+											<li>Alternative mobile: +254 711 807 845</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Footer Contact Item -->
+							<div class="col-xl-4 footer_contact_col">
+								<div
+									class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+									<div class="footer_contact_icon">
+										<div class="fab">
+								
+											<a href="https://goo.gl/maps/iMMnfvEhnzVeoAbE8">
+											  <i class="fas fa-map-marker-alt"></i>
+											</a>
+										
+										  </div>
+									</div>
+									<div class="footer_contact_title">come & drop by</div>
+									<div class="footer_contact_list">
+										<ul style="max-width:190px">
+											<li>Meru county<br> Buuri sub-county<br> Along Meru- Nanyuki highway</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Footer Contact Item -->
+							<div class="col-xl-4 footer_contact_col">
+								<div
+									class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+									<div class="footer_contact_icon">
+										<div class="fab">
+										<a href="mailto:ellymunene@gmail.com">
+											<i class="fas fa-envelope"></i>
+										  </a>
+										</div>
+									</div>
+									<div class="footer_contact_title">send us a message</div>
+									<div class="footer_contact_list">
+										<ul>
+											<li>ellymunene@gmail.com</li>
+											<li>elly@profrabbitempire.com</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+
+</div>
+		</div>
+</div>
+		
+	</div>
+
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+	<script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+	<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+	<script src="{% static 'plugins/Isotope/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'plugins/scrollTo/jquery.scrollTo.min.js' %}"></script>
+	<script src="{% static 'plugins/easing/easing.js' %}"></script>
+	<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+	<script src="{% static 'js/custom.js' %}"></script>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>

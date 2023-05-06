@@ -1,0 +1,175 @@
+.slider {
+  position: relative;
+  height: 400px; /* adjust to your desired height */
+  overflow: hidden; /* hide overflowing slides */
+}
+
+.slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider .slide.active {
+  opacity: 1;
+}
+
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; /* add position to controls */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .progress-container {
+    flex: 1;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ddd;
+    clip: rect(0, 50%, 100%, 0);
+    transform: rotate(90deg);
+  }
+  
+  .progress::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    border-radius: 0 100% 100% 0 / 50%;
+    background-color: #02301b;
+    transform: rotate(0deg);
+    transform-origin: left;
+  }
+  
+  .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .prev,
+  .next {
+    background-color: #02301b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: #1cd00f;
+  }
+  
+  .prev[disabled],
+  .next[disabled] {
+    opacity: 0.5;
+    cursor: default;
+  }
+      /* CSS for the rectangle */
+      #rectangle {
+        width: 500px;
+        height: 300px;
+        top: -300px;
+        border-radius: 10px;
+        animation: move 2s infinite;
+        border: 3px solid rgb(17, 197, 17);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+        
+        position: relative;
+      }
+      
+      /* CSS for the image */
+      #rectangle img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+      
+      @keyframes move {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(50px); }
+        100% { transform: translateX(0); }
+      }
+      
+      #rectangle-text {
+        width: 1000px;
+        height: 50px;
+        top: -310px;
+        background-color: #02301b;
+        border-radius: 10px;
+        animation: move 2s infinite;
+        border: 3px solid rgb(14, 212, 47);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(to bottom right, #97d638, #2b4d04);
+        position: relative;
+        text-align: center; 
+      }
+    
+ 
+  
+
+      /* CSS for the rectangle on the right */
+  #rectangle2 {
+    top:65px;
+    width: 550px;
+    height: 300px;
+    right: -48%;
+    border-radius: 10px;
+    border: 3px solid rgb(17, 197, 17);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom right, #02301b, #92c558);
+    position: relative;
+    display: inline-block;
+    z-index: -1;
+  }
+  
+  #rectangle2:before,
+  #rectangle2:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to bottom right, #02301b, #92c558);
+
+  }
+  
+ p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    font-size: 10px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    width: 80%;
+  }
